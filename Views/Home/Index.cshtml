@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    var Listdataerror = ViewData["dataerror"] as List<String>;
+}
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    <div class="jumbotron">
+        <h1>Tool Get Link Thumb from Post</h1>
+
+    </div>
+    <input type="file" name="FileUpload" id="FileUpload">
+    <br>
+    <button type="submit" id="submit"> ImportExcel </button>
+    {
+        if (Listdataerror.Count > 0 || Listdataerror != null)
+        {
+            <div>
+                Danh Sách NewsId có thumb lỗi
+            </div>
+            foreach (var item in Listdataerror)
+            {
+                <div>
+                    @item
+                </div>
+
+            }
+        }
+    }
+
+
+}
+
