@@ -44,9 +44,7 @@ namespace ToolGetThumb.Controllers
                                                    Path.GetFileName(FileUpload.FileName));
                         FileUpload.SaveAs(filePath);
                         var Path_Excel = Path.GetFileName(FileUpload.FileName);
-                        // Debug.WriteLine("\n +++++++++EXCEL: " + selloutaeon_.Excel);
                         var Excel_Path = "/Content/templates/" + Path.GetFileName(FileUpload.FileName);
-                        // Debug.WriteLine("\n +++++++++EXCEL_PATH: " + selloutaeon_.Excel_Path);
                     }
                     catch (Exception ex)
                     {
