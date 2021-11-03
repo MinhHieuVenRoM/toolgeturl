@@ -172,7 +172,7 @@ namespace ToolGetThumb.Controllers
                 // Sends the HttpWebRequest and waits for a response.
                 HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
                 if (myHttpWebResponse.StatusCode == HttpStatusCode.OK)
-                    System.Diagnostics.Debug.WriteLine("\r\nStatus Code is OK"+url);
+                    System.Diagnostics.Debug.WriteLine("\r\nStatus Code is OK "+url);
                 else
                 {
                     DSIdNewsError.Add(idNews);
